@@ -77,8 +77,4 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-      - name: Microsoft Teams Deploy Card
-        uses: toko-bifrost/ms-teams-deploy-card@master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          webhook-uri: https://outlook.office.com/webhook/bcfd3775-a771-49e6-b79d-22ff707a4c40@06ad24ba-31eb-40d8-948c-a29338f7d041/IncomingWebhook/5a738307ed654087995ec4f9639db9d0/d6f7e798-b56f-45ae-a326-56f16e49e7af
+  
