@@ -73,8 +73,3 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
-      - name: Notify Teams
-        run: |
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-          url="https://outlook.office.com/webhook/bcfd3775-a771-49e6-b79d-22ff707a4c40@06ad24ba-31eb-40d8-948c-a29338f7d041/IncomingWebhook/5a738307ed654087995ec4f9639db9d0/d6f7e798-b56f-45ae-a326-56f16e49e7af"
-          curl -H 'Content-Type: application/json' -d {"text": "GitHub has built and pushed your $IMAGE_NAME\:$VERSION" } $url
