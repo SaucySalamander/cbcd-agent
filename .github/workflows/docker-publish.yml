@@ -48,7 +48,7 @@ jobs:
       - uses: toko-bifrost/ms-teams-deploy-card@master #  or "./" if in a local set-up
         if: always()
         with:
-          github-token: 8ca0f9dd625db324a3238ba2351b793e2ef43c97
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           webhook-uri: https://outlook.office.com/webhook/bcfd3775-a771-49e6-b79d-22ff707a4c40@06ad24ba-31eb-40d8-948c-a29338f7d041/IncomingWebhook/5a738307ed654087995ec4f9639db9d0/d6f7e798-b56f-45ae-a326-56f16e49e7af
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
