@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: saucysalamander/cbcd-agent
+  IMAGE_NAME: cbcd-agent
 
 jobs:
   # Run tests.
